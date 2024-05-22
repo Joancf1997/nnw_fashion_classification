@@ -1,0 +1,19 @@
+version: '3'
+services:
+  model-api:
+    image: model-api:latest
+    container_name: Fashion_API
+    build:
+      context: ./model-api
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+
+  model-ui:
+    image: model-ui:latest
+    container_name: Fashion_UI
+    build:
+      context: ./fashion-classifier-ui
+      dockerfile: Dockerfile
+    ports:
+      - "5173:5173"
