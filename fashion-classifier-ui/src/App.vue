@@ -10,8 +10,8 @@
           <input type="file" @change="onFileSelected" />
         </div>
       </div>
-      <div v-show="imageSrc">
-        <img :src="imageSrc" alt="Selected Image" style="max-width: 560px; height: 560px;" />
+      <div v-show="imageSrc" class="canvasSpace">
+        <img  class="image" :src="imageSrc" alt="Selected Image" style="max-width: 560px; height: 560px;" />
       </div>
       <div v-show="!imageSrc" class="canvasSpace"> 
         <canvas ref="canvas" width="560px" height="560px" class="canvas"></canvas>
@@ -34,6 +34,10 @@
   font-size: 4em;
   margin-top: 100px;
   text-align: center;
+}
+
+.image{  
+  display: inline;
 }
 
 .canvas{  
