@@ -20,7 +20,6 @@ cd nnw_fashion_classification
 docker-compose up
 ```
 
-<br> 
 Open the project UI at [Web UI](http://localhost:5173/)
 
 
