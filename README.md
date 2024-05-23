@@ -12,29 +12,16 @@ This UI is connected to a Flask server that loads the model and process the imag
 
 ## setup
 
-<ul> 
-    <li> 
-        clone this repository 
+clone this repository 
 
-        ```
-        $  git clone https://github.com/Joancf1997/nnw_fashion_classification.git
-        ```
-        </br>
-        ```
-        $  cd nnw_fashion_classification
-        ```
-    </li>
-    <br> 
-    <li>
-        In a terminal, start Docker Compose  <br>
-        ```
-        $  docker-compose up
-        ```
-    </li>
-    <br> 
-    <li>
-        Open the project UI at [http://localhost:5173/](http://localhost:5173/)
-    </li>
-</ul>
+```sh
+git clone https://github.com/Joancf1997/nnw_fashion_classification.git
+cd nnw_fashion_classification
+docker-compose up
+```
+
+<br> 
+Open the project UI at [http://localhost:5173/](http://localhost:5173/)
+
 
 
