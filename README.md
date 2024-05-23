@@ -21,7 +21,7 @@ docker-compose up
 ```
 
 <br> 
-Open the project UI at [http://localhost:5173/](http://localhost:5173/)
+Open the project UI at [Web UI](http://localhost:5173/)
 
 
 
