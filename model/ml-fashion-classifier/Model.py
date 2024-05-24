@@ -444,6 +444,30 @@ class Model:
         plt.legend()
         plt.show()
 
+    def confidence_histogram(self, confidences): 
+        fashion_mnist_labels = [
+            'T-shirt/top',
+            'Trouser',
+            'Pullover',
+            'Dress',
+            'Coat',
+            'Sandal',
+            'Shirt',
+            'Sneaker',
+            'Bag',
+            'Ankle boot'
+        ]
+
+        plt.figure(figsize=(10, 6))
+        plt.bar(fashion_mnist_labels, confidences, color='skyblue')
+        plt.xlabel('Classes')
+        plt.ylabel('Confidence')
+        plt.title('Confidence of Each Class')
+        plt.ylim(0, 1)  # Assuming confidence values are between 0 and 1
+        plt.xticks(rotation=45)
+        plt.grid(axis='y', linestyle='--', alpha=0.7)
+        plt.show()
+
 
     # Loads and returns a model
     @staticmethod
