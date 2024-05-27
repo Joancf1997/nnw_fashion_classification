@@ -91,13 +91,28 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>This UI is connected to a Flask server that loads the model and process the image returning the prediction and confidence for the prediction following the next architecture on docker.</p>
 <p><img src="Images_repo/Architecture.png" class="img-fluid"></p>
 </section>
-<section id="setup" class="level2">
-<h2 class="anchored" data-anchor-id="setup">setup</h2>
-<p>clone this repository</p>
+<section id="docker-setup---production" class="level2">
+<h2 class="anchored" data-anchor-id="docker-setup---production">Docker Setup - Production</h2>
+<p>To play with the development docker system.</p>
+<p>clone this repository.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/Joancf1997/nnw_fashion_classification.git</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> nnw_fashion_classification</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ex">docker-compose</span> up</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Open the project UI at <a href="http://localhost:5173/">Web UI</a></p>
+</section>
+<section id="python-setup---development" class="level2">
+<h2 class="anchored" data-anchor-id="python-setup---development">Python Setup - Development</h2>
+<p>To play with the neural network code you can download the code and environment of the model.</p>
+<p>clone this repository.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/Joancf1997/nnw_fashion_classification.git</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> nnw_fashion_classification/model/ml-fashion-classifier/</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> env create <span class="at">--file</span> environment.yml</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Play with the different training files:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> model_training.py    <span class="co"># 128 Neurons</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> model_training2.py   <span class="co"># 784 Neurons</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> model_training3.py   <span class="co"># 1000 Neurons</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Use the model to predict:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> model_predicting.py  <span class="co"># Same model as production </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 </section>
 

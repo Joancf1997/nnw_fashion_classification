@@ -10,9 +10,11 @@ This UI is connected to a Flask server that loads the model and process the imag
 
 ![](Images_repo/Architecture.png)
 
-## setup
+## Docker Setup - Production
 
-clone this repository 
+To play with the development docker system.
+
+clone this repository. 
 
 ```sh
 git clone https://github.com/Joancf1997/nnw_fashion_classification.git
@@ -24,3 +26,29 @@ Open the project UI at [Web UI](http://localhost:5173/)
 
 
 
+
+## Python Setup - Development
+
+To play with the neural network code you can download the code and environment of the model. 
+
+clone this repository. 
+
+```sh
+git clone https://github.com/Joancf1997/nnw_fashion_classification.git
+cd nnw_fashion_classification/model/ml-fashion-classifier/
+conda env create --file environment.yml
+```
+
+Play with the different training files: 
+
+```sh
+python model_training.py    # 128 Neurons
+python model_training2.py   # 784 Neurons
+python model_training3.py   # 1000 Neurons
+```
+
+Use the model to predict: 
+
+```sh
+python model_predicting.py  # Same model as production 
+```
