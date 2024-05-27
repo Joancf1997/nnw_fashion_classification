@@ -35,8 +35,8 @@ clone this repository.
 
 ```sh
 git clone https://github.com/Joancf1997/nnw_fashion_classification.git
-cd nnw_fashion_classification/model/ml-fashion-classifier/
 conda env create --file environment.yml
+cd nnw_fashion_classification/model/ml-fashion-classifier/
 ```
 
 Play with the different training files: 
