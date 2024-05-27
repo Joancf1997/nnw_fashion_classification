@@ -172,10 +172,7 @@ class Model:
                     self.trainStepAccuracy.append(accuracy)
                     print(f'step: {step}, ' +
                           f'acc: {accuracy:.3f}, ' +
-                          f'loss: {loss:.3f} (' +
-                          f'data_loss: {data_loss:.3f}, ' +
-                          f'reg_loss: {regularization_loss:.3f}), ' +
-                          f'lr: {self.optimizer.current_learning_rate}')
+                          f'loss: {loss:.3f}')
 
             # Get and print epoch loss and accuracy
             epoch_data_loss, epoch_regularization_loss = \
@@ -187,10 +184,7 @@ class Model:
             self.trainEpocAccuracy.append(accuracy)
             print(f'training, ' +
                   f'acc: {epoch_accuracy:.3f}, ' +
-                  f'loss: {epoch_loss:.3f} (' +
-                  f'data_loss: {epoch_data_loss:.3f}, ' +
-                  f'reg_loss: {epoch_regularization_loss:.3f}), ' +
-                  f'lr: {self.optimizer.current_learning_rate}')
+                  f'loss: {epoch_loss:.3f}')
 
             # If there is the validation data
             if validation_data is not None:
